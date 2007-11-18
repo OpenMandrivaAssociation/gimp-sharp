@@ -1,5 +1,5 @@
 %define name gimp-sharp
-%define version 0.12
+%define version 0.13
 %define release %mkrel 1
 %define gimpver 2.0
 %define gimpapi 2.0
@@ -9,7 +9,7 @@ Summary: Gimp# allows writing Gimp plugin with Mono
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://prdownloads.sourceforge.net/gimp-sharp/%{name}-%{version}.tar.bz2
+Source0: http://prdownloads.sourceforge.net/gimp-sharp/%{name}-%{version}.tar.gz
 Patch1: gimp-sharp-0.12-dllconfig.patch
 License: GPL
 Group: Graphics
@@ -20,7 +20,7 @@ BuildRequires: automake1.7
 BuildRequires: gtk-sharp2
 BuildRequires: mono-devel
 #BuildRequires: ikvm
-#BuildRequires: ironpython
+BuildRequires: ironpython
 BuildRequires: libumfpack-devel libblas-devel
 
 %description
@@ -35,9 +35,9 @@ autoconf
 automake-1.7
 
 %build
-%configure2_5x --with-unittest
-# --with-java --with-ironpython
-%make
+%configure2_5x --with-unittest --with-ironpython
+# --with-java 
+make
 
 %install
 rm -rf $RPM_BUILD_ROOT
