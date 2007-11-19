@@ -1,6 +1,6 @@
 %define name gimp-sharp
 %define version 0.13
-%define release %mkrel 2
+%define release %mkrel 3
 %define gimpver 2.0
 %define gimpapi 2.0
 %define gimpmajor 0
@@ -21,7 +21,7 @@ BuildRequires: gtk-sharp2
 BuildRequires: mono-devel
 #BuildRequires: ikvm
 BuildRequires: ironpython
-BuildRequires: libumfpack-devel blas-devel
+BuildRequires: umfpack-devel blas-devel
 
 %description
 This are the C# bindings for GIMP 2.0 that allow the implementation of
