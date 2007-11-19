@@ -21,7 +21,7 @@ BuildRequires: gtk-sharp2
 BuildRequires: mono-devel
 #BuildRequires: ikvm
 BuildRequires: ironpython
-BuildRequires: libumfpack-devel libblas-devel
+BuildRequires: libumfpack-devel blas-devel
 
 %description
 This are the C# bindings for GIMP 2.0 that allow the implementation of
