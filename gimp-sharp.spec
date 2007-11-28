@@ -1,6 +1,6 @@
 %define name gimp-sharp
 %define version 0.13
-%define release %mkrel 3
+%define release %mkrel 4
 %define gimpver 2.0
 %define gimpapi 2.0
 %define gimpmajor 0
@@ -10,6 +10,7 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://prdownloads.sourceforge.net/gimp-sharp/%{name}-%{version}.tar.gz
+Patch: gimp-sharp-0.13-paths.patch
 Patch1: gimp-sharp-0.13-dllconfig.patch
 License: GPL
 Group: Graphics
@@ -29,10 +30,12 @@ plugins with mono.
 
 %prep
 %setup -q
+%patch -p1 -b .paths
 %patch1 -p1 -b .dllconfig
 aclocal-1.7
 autoconf
 automake-1.7
+perl -pi -e "s!LIBDIR!%_libdir!" plug-ins/PythonSample/PythonSample
 
 %build
 %configure2_5x --with-unittest --with-ironpython
