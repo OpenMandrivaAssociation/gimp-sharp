@@ -1,6 +1,6 @@
 %define name gimp-sharp
 %define version 0.13
-%define release %mkrel 4
+%define release %mkrel 5
 %define gimpver 2.0
 %define gimpapi 2.0
 %define gimpmajor 0
