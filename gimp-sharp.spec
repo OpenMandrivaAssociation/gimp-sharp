@@ -15,6 +15,7 @@ Patch1: gimp-sharp-0.13-dllconfig.patch
 License: GPL
 Group: Graphics
 Url: http://gimp-sharp.sourceforge.net/
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: libgimp-devel >= %gimpver
 BuildRequires: automake1.7
 BuildRequires: gtk-sharp2
