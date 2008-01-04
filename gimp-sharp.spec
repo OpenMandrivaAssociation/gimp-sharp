@@ -1,6 +1,6 @@
 %define name gimp-sharp
-%define version 0.13
-%define release %mkrel 5
+%define version 0.14
+%define release %mkrel 1
 %define gimpver 2.0
 %define gimpapi 2.0
 %define gimpmajor 0
@@ -11,7 +11,7 @@ Version: %{version}
 Release: %{release}
 Source0: http://prdownloads.sourceforge.net/gimp-sharp/%{name}-%{version}.tar.gz
 Patch: gimp-sharp-0.13-paths.patch
-Patch1: gimp-sharp-0.13-dllconfig.patch
+Patch1: gimp-sharp-0.14-dllconfig.patch
 License: GPL
 Group: Graphics
 Url: http://gimp-sharp.sourceforge.net/
@@ -20,6 +20,8 @@ BuildRequires: libgimp-devel >= %gimpver
 BuildRequires: automake1.7
 BuildRequires: gtk-sharp2
 BuildRequires: mono-devel
+BuildRequires: mono-basic
+BuildRequires: boo
 #BuildRequires: ikvm
 BuildRequires: ironpython
 BuildRequires: umfpack-devel blas-devel
@@ -38,8 +40,8 @@ automake-1.7
 perl -pi -e "s!LIBDIR!%_libdir!" plug-ins/PythonSample/PythonSample
 
 %build
-%configure2_5x --with-unittest --with-ironpython
-# --with-java 
+%configure2_5x --with-unittest --with-ironpython  --with-vb --with-boo
+#--with-java
 make
 
 %install
