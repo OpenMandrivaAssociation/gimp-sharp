@@ -22,7 +22,7 @@ BuildRequires: gtk-sharp2
 BuildRequires: mono-devel
 BuildRequires: mono-basic
 BuildRequires: boo
-#BuildRequires: ikvm
+BuildRequires: ikvm > 0.36.0.5
 BuildRequires: ironpython
 BuildRequires: umfpack-devel blas-devel
 
@@ -40,8 +40,7 @@ automake-1.7
 perl -pi -e "s!LIBDIR!%_libdir!" plug-ins/PythonSample/PythonSample
 
 %build
-%configure2_5x --with-unittest --with-ironpython  --with-vb --with-boo
-#--with-java
+%configure2_5x --with-unittest --with-ironpython  --with-vb --with-boo --with-java
 make
 
 %install
