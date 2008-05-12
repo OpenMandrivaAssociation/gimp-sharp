@@ -1,5 +1,5 @@
 %define name gimp-sharp
-%define version 0.14
+%define version 0.15
 %define release %mkrel 1
 %define gimpver 2.0
 %define gimpapi 2.0
@@ -34,13 +34,10 @@ plugins with mono.
 %setup -q
 %patch -p1 -b .paths
 %patch1 -p1 -b .dllconfig
-aclocal-1.7
-autoconf
-automake-1.7
 perl -pi -e "s!LIBDIR!%_libdir!" plug-ins/PythonSample/PythonSample
 
 %build
-%configure2_5x --with-unittest --with-ironpython  --with-vb --with-boo --with-java
+%configure2_5x --with-unittest --with-vb --with-boo --with-java
 make
 
 %install
