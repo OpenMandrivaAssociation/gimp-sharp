@@ -12,7 +12,8 @@ Release: %{release}
 Source0: http://prdownloads.sourceforge.net/gimp-sharp/%{name}-%{version}.tar.gz
 Patch: gimp-sharp-0.13-paths.patch
 Patch1: gimp-sharp-0.14-dllconfig.patch
-License: GPL
+Patch2: gimp-sharp-0.15-plugindir.patch
+License: LGPLv2+
 Group: Graphics
 Url: http://gimp-sharp.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -24,6 +25,7 @@ BuildRequires: mono-basic
 BuildRequires: boo
 BuildRequires: ikvm > 0.36.0.5
 BuildRequires: ironpython
+BuildRequires: nemerle
 BuildRequires: umfpack-devel blas-devel
 
 %description
@@ -34,10 +36,15 @@ plugins with mono.
 %setup -q
 %patch -p1 -b .paths
 %patch1 -p1 -b .dllconfig
+%patch2 -p1
 perl -pi -e "s!LIBDIR!%_libdir!" plug-ins/PythonSample/PythonSample
+aclocal
+autoconf
+automake
 
 %build
-%configure2_5x --with-unittest --with-vb --with-boo --with-java
+export CPPFLAGS=-I%_includedir/suitesparse
+%configure2_5x --with-unittest --with-vb --with-boo --with-java --with-ironpython --with-nemerle
 make
 
 %install
