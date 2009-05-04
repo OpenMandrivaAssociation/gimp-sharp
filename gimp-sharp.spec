@@ -1,6 +1,6 @@
 %define name gimp-sharp
 %define version 0.15
-%define release %mkrel 2
+%define release %mkrel 3
 %define gimpver 2.0
 %define gimpapi 2.0
 %define gimpmajor 0
@@ -11,7 +11,7 @@ Version: %{version}
 Release: %{release}
 Source0: http://prdownloads.sourceforge.net/gimp-sharp/%{name}-%{version}.tar.gz
 Patch: gimp-sharp-0.13-paths.patch
-Patch1: gimp-sharp-0.14-dllconfig.patch
+Patch1: gimp-sharp-0.15-dllconfig.patch
 Patch2: gimp-sharp-0.15-plugindir.patch
 License: LGPLv2+
 Group: Graphics
