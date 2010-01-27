@@ -1,6 +1,6 @@
 %define name gimp-sharp
 %define version 0.16
-%define release %mkrel 1
+%define release %mkrel 2
 %define gimpver 2.0
 %define gimpapi 2.0
 %define gimpmajor 0
@@ -24,7 +24,7 @@ BuildRequires: mono-devel
 BuildRequires: mono-basic
 BuildRequires: boo
 BuildRequires: ikvm > 0.36.0.5
-#BuildRequires: ironpython
+BuildRequires: ironpython
 #BuildRequires: nemerle
 BuildRequires: umfpack-devel blas-devel
 
@@ -42,8 +42,7 @@ autoreconf -fi
 
 %build
 export CPPFLAGS=-I%_includedir/suitesparse
-%configure2_5x --with-vb --with-boo --with-java
-# --with-ironpython 
+%configure2_5x --with-vb --with-boo --with-java --with-ironpython
 #--with-nemerle --with-unittest
 make
 
