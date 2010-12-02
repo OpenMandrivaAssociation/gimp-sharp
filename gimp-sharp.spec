@@ -21,7 +21,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: libgimp-devel >= %gimpver
 BuildRequires: automake1.7
 BuildRequires: gtk-sharp2
-BuildRequires: mono-devel
+BuildRequires: mono-devel >= 2.8
 BuildRequires: mono-basic
 BuildRequires: boo
 BuildRequires: ikvm > 0.36.0.5
