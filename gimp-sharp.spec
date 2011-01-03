@@ -1,6 +1,6 @@
 %define name gimp-sharp
 %define version 0.17
-%define release %mkrel 1
+%define release %mkrel 2
 %define gimpver 2.0
 %define gimpapi 2.0
 %define gimpmajor 0
@@ -19,7 +19,7 @@ Group: Graphics
 Url: http://gimp-sharp.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: libgimp-devel >= %gimpver
-BuildRequires: automake1.7
+BuildRequires: automake
 BuildRequires: gtk-sharp2
 BuildRequires: mono-devel >= 2.8
 BuildRequires: mono-basic
