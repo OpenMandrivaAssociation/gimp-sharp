@@ -22,8 +22,6 @@ BuildRequires: libgimp-devel >= %gimpver
 BuildRequires: automake
 BuildRequires: gtk-sharp2
 BuildRequires: mono-devel >= 2.8
-BuildRequires: mono-basic
-BuildRequires: boo
 BuildRequires: ikvm > 0.36.0.5
 BuildRequires: ironpython
 #BuildRequires: nemerle
@@ -42,7 +40,7 @@ autoreconf -fi
 
 %build
 export CPPFLAGS=-I%_includedir/suitesparse
-%configure2_5x --with-vb --with-boo --with-java --with-ironpython
+%configure2_5x --with-java --with-ironpython
 #--with-nemerle --with-unittest
 make
 
@@ -61,5 +59,3 @@ rm -rf $RPM_BUILD_ROOT
 %lang(it) %_datadir/locale/it/LC_MESSAGES/*.mo
 %lang(ru) %_datadir/locale/ru/LC_MESSAGES/*.mo
 %{_libdir}/gimp/%gimpapi/plug-ins/*
-
-
