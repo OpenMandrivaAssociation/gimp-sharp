@@ -1,0 +1,12 @@
+diff -p -up gimp-sharp-0.16/java/stubs/Makefile.am~ gimp-sharp-0.16/java/stubs/Makefile.am
+--- gimp-sharp-0.16/java/stubs/Makefile.am~	2007-01-06 16:47:26.000000000 +0100
++++ gimp-sharp-0.16/java/stubs/Makefile.am	2010-10-07 20:47:08.000000000 +0200
+@@ -19,7 +19,7 @@ all: $(STUBS)
+ SUFFIXES = .dll .jar
+ 
+ .dll.jar:
+-	mono $(IKVMDIR)/ikvmstub.exe $< 
++	mono $(IKVMDIR)/ikvmstub.exe -lib:$(prefix)/lib/mono/gtk-sharp-2.0 $< 
+ 
+ gimp-sharp.dll:
+ 	cp ../../lib/gimp-sharp.dll .

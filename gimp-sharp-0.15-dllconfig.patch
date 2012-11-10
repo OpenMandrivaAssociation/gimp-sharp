@@ -1,0 +1,30 @@
+diff -p -up gimp-sharp-0.15/lib/gimp-sharp.dll.config.dllconfig gimp-sharp-0.15/lib/gimp-sharp.dll.config
+--- gimp-sharp-0.15/lib/gimp-sharp.dll.config.dllconfig	2008-05-06 21:42:44.000000000 +0200
++++ gimp-sharp-0.15/lib/gimp-sharp.dll.config	2009-05-04 08:15:52.000000000 +0200
+@@ -1,9 +1,10 @@
+ <configuration>
+-   <dllmap dll="libglib-2.0-0.dll" target="libglib-2.0.so" />
+-   <dllmap dll="libgimp-2.0-0.dll" target="libgimp-2.0.so" />
+-   <dllmap dll="libgimpbase-2.0-0.dll" target="libgimpbase-2.0.so" />
+-   <dllmap dll="libgimpcolor-2.0-0.dll" target="libgimpcolor-2.0.so" />
+-   <dllmap dll="libgimpmath-2.0-0.dll" target="libgimpmath-2.0.so" />
+-   <dllmap dll="libgimpui-2.0-0.dll" target="libgimpui-2.0.so" />
+-   <dllmap dll="libgimpwidgets-2.0-0.dll" target="libgimpwidgets-2.0.so" />
++   <dllmap dll="libgimp-2.0-0.dll" target="libgimp-2.0.so.0" />
++   <dllmap dll="libgimpbase-2.0-0.dll" target="libgimpbase-2.0.so.0"/>
++   <dllmap dll="libgimpmath-2.0-0.dll" target="libgimpmath-2.0.so.0"/>
++   <dllmap dll="libgimpmodule-2.0-0.dll" target="libgimpmodule-2.0.so.0"/>
++   <dllmap dll="libgimpthumb-2.0-0.dll" target="libgimpthumb-2.0.so.0"/>
++   <dllmap dll="libgimpcolor-2.0-0.dll" target="libgimpcolor-2.0.so.0" />
++   <dllmap dll="libgimpui-2.0-0.dll" target="libgimpui-2.0.so.0" />
++   <dllmap dll="libgimpwidgets-2.0-0.dll" target="libgimpwidgets-2.0.so.0" />
+ </configuration>
+\ Kein Zeilenumbruch am Dateiende.
+diff -p -up gimp-sharp-0.15/plug-ins/Colorize/Colorize.exe.config.dllconfig gimp-sharp-0.15/plug-ins/Colorize/Colorize.exe.config
+--- gimp-sharp-0.15/plug-ins/Colorize/Colorize.exe.config.dllconfig	2009-05-04 08:14:56.000000000 +0200
++++ gimp-sharp-0.15/plug-ins/Colorize/Colorize.exe.config	2009-05-04 08:14:56.000000000 +0200
+@@ -0,0 +1,3 @@
++<configuration>
++   <dllmap dll="libumfpack.dll" target="libumfpack.so.5.4.0" />
++</configuration>
+\ Kein Zeilenumbruch am Dateiende.

@@ -1,0 +1,12 @@
+diff -p -up gimp-sharp-0.16/configure.in~ gimp-sharp-0.16/configure.in
+--- gimp-sharp-0.16/configure.in~	2009-09-21 23:30:11.000000000 +0200
++++ gimp-sharp-0.16/configure.in	2010-01-27 09:39:11.000000000 +0100
+@@ -55,7 +55,7 @@ if test "x$OS" != "xWindows_NT"; then
+ 
+     dnl GIMPPLUGINDIR=/usr/local/lib/gimp/2.0/plug-ins
+ 
+-    GIMPPLUGINDIR=`gimptool-2.0 -n --install-admin-bin README | head -1 | sed "s/\(.* \)\\(.*\\)/\2/g"`
++    GIMPPLUGINDIR=`gimptool-2.0 --gimpplugindir`/plug-ins
+ 
+     AC_SUBST(GIMPPLUGINDIR)
+ 

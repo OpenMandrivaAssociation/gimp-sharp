@@ -1,0 +1,13 @@
+--- gimp-sharp-0.13/plug-ins/PythonSample/PythonSample.paths	2007-05-02 23:13:12.000000000 +0200
++++ gimp-sharp-0.13/plug-ins/PythonSample/PythonSample	2007-11-28 08:37:37.000000000 +0100
+@@ -5,8 +5,8 @@ export LD_LIBRARY_PATH=$THISDIR:$LD_LIBR
+ 
+ # Fixme: find out were ironpython is installed!
+ 
+-export MONO_PATH=/usr/lib/ironpython/:$MONO_PATH
++export MONO_PATH=/usr/lib/ironpython/ipy:$MONO_PATH
+ 
+-export PLUGINDIR=`gimptool-2.0 --gimpplugindir`"/plug-ins"
++export PLUGINDIR=LIBDIR/gimp/2.0/plug-ins
+ 
+ mono $THISDIR/PythonSample.exe "$@"
