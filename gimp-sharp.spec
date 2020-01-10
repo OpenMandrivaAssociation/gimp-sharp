@@ -33,7 +33,7 @@ plugins with mono.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 perl -pi -e "s!LIBDIR!%_libdir!" plug-ins/PythonSample/PythonSample
 autoreconf -fi
