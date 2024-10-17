@@ -16,7 +16,7 @@ Patch2: gimp-sharp-0.16-plugindir.patch
 Patch3: gimp-sharp-0.16-ikvmstubpath.patch
 License: LGPLv2+
 Group: Graphics
-Url: http://gimp-sharp.sourceforge.net/
+Url: https://gimp-sharp.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: libgimp-devel >= %gimpver
 BuildRequires: automake
