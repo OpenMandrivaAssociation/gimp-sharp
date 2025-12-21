@@ -18,6 +18,9 @@ License: LGPLv2+
 Group: Graphics
 Url: https://gimp-sharp.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	autoconf
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires: libgimp-devel >= %gimpver
 BuildRequires: automake
 BuildRequires: gtk-sharp2
